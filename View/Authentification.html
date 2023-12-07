@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Page</title>
+  <link rel="stylesheet" href="../Ressource/CSS/Authentification.css">
+  <link rel="stylesheet" href="../Ressource/CSS/Default.css">
+  <script src="../Ressource/Script/authentification.js" defer></script>
+  <script>
+    function validateForm() {
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm_password").value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="form-box">
+      <div class="button-box">
+        <div id="btn"></div>
+        <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Register</button>
+      </div>
+      <form id="login" class="input-group" action="login.php" method="POST" onsubmit="return validateForm()">
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="text" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Create password" required>
+        </div>
+        <div class="input-box button">
+          <button type="submit" class="submit-btn">Login</button>
+        </div>
+        <div class="text">
+          <h3>Not a member? <a href="#" onclick="register()">Create Account</a></h3>
+        </div>
+      </form>
+      <form id="register" class="input-group" action="register.php" method="POST" onsubmit="return validateForm()">
+        <div class="input-box">
+          <label for="name">Name</label>
+          <input type="text" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="input-box">
+          <label for="email">Email</label>
+          <input type="text" name="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-box">
+          <label for="password">Password</label>
+          <input type="password" name="password" id="password" placeholder="Create password" required>
+        </div>
+        <div class="input-box">
+          <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" required>
+        </div>
+        <div class="input-box button">
+          <button type="submit" class="submit-btn">Register</button>
+        </div>
+        <div class="text">
+          <h3>Already have an account? <a href="#" onclick="login()">Login now</a></h3>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
