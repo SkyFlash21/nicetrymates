@@ -29,19 +29,19 @@
                     <span class="material-icons-sharp">
                         person_outline
                     </span>
-                    <h3>Users</h3>
+                    <h3>Utilisateur</h3>
                 </a>
                 <a href="#" class="tablinks active" onclick="clickBtn(2)">
                     <span class="material-icons-sharp">
                         insights
                     </span>
-                    <h3>Analytics</h3>
+                    <h3>LeaderBoard</h3>
                 </a>
                 <a href="#" class="tablinks" onclick="clickBtn(3)">
                     <span class="material-icons-sharp">
                         logout
                     </span>
-                    <h3>Logout</h3>
+                    <h3>?</h3>
                 </a></ul>
             </div>
         </aside>
@@ -101,8 +101,28 @@
                 </div>
                 <!-- End of Recent Orders -->
             </div>
-            <div class="section-container"></div>
-            <div class="section-container"></div>
+            <div class="section-container">
+                
+            </div>
+            <div class="section-container">
+                <div class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Utilisateur</th>
+                                <th>Bonnes réponses</th>
+                                <th>Rang</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#">Show All</a>
+                </div>
+            </div>
+            <div class="section-container">
+
+            </div>
         </main> 
         <!-- End of Main Content -->
 
@@ -139,7 +159,17 @@
     </div>
 
     </div>
+    <script>
+        window.onload = function() {
+            init();
+        }
+    
+        function init() {
+            clickBtn(0);
+        }
+    </script>
     <script src="../Ressource/JS/dashboard_index.js"></script>
 </body>
 
 </html>
+
