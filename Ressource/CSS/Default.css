@@ -6,3 +6,11 @@
 body {
     font-family: 'MaSuperPolice', sans-serif;
 }
+
+:root {
+    --bleu: #B8CBD0;
+    --vertC: #C9E3CC;
+    --vertGris: #B0B9A8;
+    --vertF: #606C5A;
+    --noir : #424340:
+}

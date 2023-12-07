@@ -10,12 +10,24 @@ body{
     position: absolute;
 }
 
-.bx-chevron-left{
-    left: 40px;
+.bx-chevron-left:first-child{
+    left: 60px;
+}
+
+.bx-chevron-left:last-child{
+    left: 60px;
 }
 
 .bx-chevron-right{
     right: 40px;
+}
+
+.bx-chevron-right:first-child{
+    right: 40px;
+}
+
+.bx-chevron-left:hover{
+    left: 40px;
 }
 
 /* Menu */
@@ -49,4 +61,20 @@ body{
 .title-container p{
     color: #fff;
     font-size: 30px;
+}
+
+.partie-container{
+    position: absolute;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    overflow: hidden;
+    margin: 10px 35%;
+    text-align: center;
+    justify-content: center;
+}
+
+.partie-container *{
+    margin: 0px 10px;
 }
