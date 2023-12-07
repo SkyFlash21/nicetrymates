@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MaSuperPolice';
-    src: url('chemin/vers/maSuperPolice.ttf') format('truetype');
+    src: url('../Roboto/Roboto-Black.ttf') format('truetype');
 }
 
 body {
