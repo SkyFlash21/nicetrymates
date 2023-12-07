@@ -9,7 +9,7 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL,
     hashedpassword VARCHAR(255) NOT NULL,
     lastconnection DATETIME,
-    token VARCHAR(255)
+    connectiontoken VARCHAR(255)
 );
 
 

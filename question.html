@@ -1,30 +1,30 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script>
-function showHint(str) {
-  if (str.length == 0) {
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    };
-    xmlhttp.open("GET", "gethint.php?q=" + str, true);
-    xmlhttp.send();
-  }
-}
-</script>
+  <title>Question Form</title>
 </head>
 <body>
+  <form id="questionForm">
+    <label for="question_id">Question ID:</label>
+    <input type="number" id="question_id" name="question_id" required>
+    <label for="answer_id">Answer ID:</label>
+    <input type="number" id="answer_id" name="answer_id" required>
+    <button type="submit">Submit</button>
+  </form>
 
-<p><b>Start typing a name in the input field below:</b></p>
-<form action="">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
-</form>
-<p>Suggestions: <span id="txtHint"></span></p>
+  <script>
+    document.getElementById('questionForm').addEventListener('submit', async function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      const formElem = document.getElementById('questionForm');
+      const response = await fetch('/question.php', {
+        method: 'POST',
+        body: new FormData(formElem)
+      });
+
+      const htmlPage = await response.text();
+      console.log(htmlPage); // Retrieve the HTML page
+    });
+  </script>
 </body>
 </html>
