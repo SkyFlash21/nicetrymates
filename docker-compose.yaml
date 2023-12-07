@@ -1,14 +1,6 @@
 version: '3'
 services:
-  db: 
-    image: mysql:latest
-    environment:
-      - MYSQL_DATABASE=php_docker
-      - MYSQL_USER=php_docker
-      - MYSQL_PASSWORD=ceciestunmotsdepasstrescomplique # this should live in a env var
-      - MYSQL_ALLOW_EMPTY_PASSWORD=1 # equivalent to True
-    volumes:
-      - "./db:/docker-entrypoint-initdb.d" # this is how we persist a sql db even when container stops
+
   www:
     image: php:apache
     volumes:
@@ -16,10 +8,19 @@ services:
     ports:
       - 80:80
       - 443:443 # for future ssl traffic
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    ports:
-      - 8001:80
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
     environment:
-      - PMA_HOST=db
-      - PMA_PORT=3306
+      MYSQL_ROOT_PASSWORD: ceciestunmotsdepasstrescompliquepourleroot
+      MYSQL_DATABASE: nicetrymates
+      MYSQL_USER: limited_user
+      MYSQL_PASSWORD: ceciestunmotsdepasstrescompliquepourlimited_user
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
