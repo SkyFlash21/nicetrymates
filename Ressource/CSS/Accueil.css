@@ -1,0 +1,25 @@
+body{
+    background-image: url("../Images/fondForet1.jpg");
+}
+
+/* Navigation */
+.bx-chevron-left,.bx-chevron-right{
+    font-size: 80px;
+    color: #fff;
+    top: 45%;
+    position: absolute;
+}
+
+.bx-chevron-left{
+    left: 40px;
+}
+
+.bx-chevron-right{
+    right: 40px;
+}
+
+/* Menu */
+.menu-container{
+    display: flex;
+    
+}
