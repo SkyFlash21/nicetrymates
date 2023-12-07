@@ -13,9 +13,26 @@
     
 </head>zdaz
 <body>
+
+    <div class="bg-black"></div>
+
     <!-- Navigation flèche-->
-    <i class='bx bx-chevron-left'></i>
-    <i class='bx bx-chevron-right'></i>
+    <p id="fleche-gauche">
+        <i class='bx bx-chevron-left'></i>
+        <i class='bx bx-chevron-left'></i>
+    </p>
+
+    <p id="fleche-droite">
+        <i class='bx bx-chevron-right'></i>
+        <i class='bx bx-chevron-right'></i>
+    </p>
+
+
+    <div class="partie-container">
+        <p>Accueil</p>
+        <p>A propos</p>
+        <p>Missions</p>
+    </div>
 
     <!-- Option -->
     <div class="menu-container">
@@ -23,93 +40,23 @@
         <p><i class='bx bx-user-circle' ></i></i></p>
     </div>
 
-    <div class="title-container">
+    <div class="title-container container">
         <h1>Nom du Site</h1>
         <p>Petite phrase de présentation</p>
     </div>
 
-</body>
-</html>
+    <div class="title-container container">
+        <h2>A propos</h1>
+        <p>Petite phrase de présentation</p>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <div class="title-container container">
+        <h2>Nos missions</h1>
+        <p>Petite phrase de présentation</p>
+    </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zooming Scenes</title>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <style>
-        body {
-            margin: 0;
-            overflow: hidden;
-        }
-        .question {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #ddd;
-            font-size: 24px;
-        }
-    </style>
-</head>
-<body>
+    <button class="btn" href="#">Jouer</button>
 
-    <!-- chaque scene a des bouton qui lorsque cliquer, change la question et donc le décord -->
-<div class="question" id="question1">
-    <p>Question 1</p>
-    <button onclick="nextQuestion()" value="reponse_1">réponse 1</button>
-    <button onclick="nextQuestion()" value="reponse_2">réponse 2</button>
-</div>
-
-<div class="question" id="question2" style="display: none;">
-    <p>Question 2</p>
-    <button onclick="nextQuestion()" value="reponse_1">réponse 1</button>
-    <button onclick="nextQuestion()" value="reponse_2">réponse 2</button>
-</div>
-
-<div class="question" id="question3" style="display: none;">
-    <p>Question 3</p>
-    <button onclick="nextQuestion()" value="reponse_1">réponse 1</button>
-    <button onclick="nextQuestion()" value="reponse_2">réponse 2</button>
-</div>
-
-<script>
-    let currentQuestion = 1;
-
-    function nextQuestion() {
-        // Zoom sur la première scene
-        $(`#question${currentQuestion}`).animate({
-            "font-size": "48px",
-            opacity: 0
-        }, 1000, function () {
-            //  cache la scene actuel et reset le style
-            $(this).hide().css({"font-size": "24px", opacity: 1});
-            
-            // change la scene a la prochaine
-            currentQuestion++;
-            if (currentQuestion > 3) {
-                currentQuestion = 1; // remet a la premiere scene une fois arriver a la derniere
-            }
-
-
-            // affiche la prochaine scene en zoomant
-            $(`#question${currentQuestion}`).show().css({
-                "font-size": "1px",
-                opacity: 0
-            }).animate({
-                "font-size": "24px",
-                opacity: 1
-            }, 1000);
-        });
-    }
-</script>
-
+    <script src="../Ressource/JS/Accueil.js"></script>
 </body>
 </html>
