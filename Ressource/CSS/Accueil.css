@@ -1,5 +1,18 @@
+*{
+    user-select: none;
+}
+
 body{
     background-image: url("../Images/fondForet1.jpg");
+}
+
+.bg-black{
+    position: fixed;
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,0.45);
 }
 
 /* Navigation */
@@ -8,14 +21,16 @@ body{
     color: #fff;
     top: 45%;
     position: absolute;
+    cursor: pointer;
+    color: var(--vertC);
 }
 
 .bx-chevron-left:first-child{
-    left: 60px;
+    left: 40px;
 }
 
 .bx-chevron-left:last-child{
-    left: 60px;
+    left: 40px;
 }
 
 .bx-chevron-right{
@@ -27,7 +42,13 @@ body{
 }
 
 .bx-chevron-left:hover{
-    left: 40px;
+    left: 20px;
+    transition: all 1s ease;
+}
+
+.bx-chevron-right:hover{
+    right: 20px;
+    transition: all 1s ease; 
 }
 
 /* Menu */
@@ -73,8 +94,74 @@ body{
     margin: 10px 35%;
     text-align: center;
     justify-content: center;
+    font-size: 20px;
+    background-color: rgba(79,89,80,0.5);
+    padding: 10px 0px;
+    border-radius: 20px;
 }
 
 .partie-container *{
     margin: 0px 10px;
 }
+
+/* Container A propos*/
+
+.container h2{
+    color: #fff;
+    font-size: 50px;
+    text-align: left;
+    color: var(--vertC);
+}
+
+.btn{
+    background: none;
+    width: 20%;
+    height: 60px;
+    border:none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--vertC);
+    transition: .2s linear;
+    position: absolute;
+    bottom: 100px;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.btn:hover{
+    color: #fff;
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--vertC);
+    z-index: -1;
+    transition: 0.2s linear;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .btn:hover::after {
+    animation: expandAnimation 0.5s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes expandAnimation {
+    0% {
+        width:10%;
+        height: 0px;
+    }
+    30% {
+      width: 10%;
+      height: 60px;
+    }
+    100% {
+      width: 100%;
+      height: 60px;
+    }
+  }
