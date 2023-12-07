@@ -125,28 +125,6 @@ aside{
     height: 100vh;
 }
 
-aside .toggle{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 1.4rem;
-}
-
-aside .toggle .logo{
-    display: flex;
-    gap: 0.5rem;
-}
-
-aside .toggle .logo img{
-    width: 2rem;
-    height: 2rem;
-}
-
-aside .toggle .close{
-    padding-right: 1rem;
-    display: none;
-}
-
 aside .sidebar{
     display: flex;
     flex-direction: column;
@@ -493,11 +471,6 @@ main .recent-orders a{
     aside .sidebar a:last-child{
         position: absolute;
         bottom: 5rem;
-    }
-
-    aside .toggle .close{
-        display: inline-block;
-        cursor: pointer;
     }
 
     main{
