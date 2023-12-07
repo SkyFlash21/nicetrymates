@@ -21,5 +21,32 @@ body{
 /* Menu */
 .menu-container{
     display: flex;
-    
+    flex-direction: row;
+    position: absolute;
+    right: 40px;
+}
+
+.menu-container i{
+    color: #fff;
+    font-size: 40px;
+    margin: 0px 10px;
+}
+
+/* Titre */
+.title-container{
+    position: absolute;
+    top: 30%;
+    width: 50%;
+    margin: 0px 25%;
+    text-align: center;
+}
+
+.title-container h1{
+    color: #fff;
+    font-size: 100px;
+}
+
+.title-container p{
+    color: #fff;
+    font-size: 30px;
 }

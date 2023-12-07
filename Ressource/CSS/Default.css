@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('chemin/vers/maSuperPolice.ttf') format('truetype');
+}
+
+body {
+    font-family: 'MaSuperPolice', sans-serif;
+}
