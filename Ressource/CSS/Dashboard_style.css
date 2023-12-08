@@ -27,8 +27,10 @@ body{
 } 
 div.mur {
     position: absolute;
-    top: 2%; /* Ajustez la position verticale de la superposition */
-    left: 2%; /* Ajustez la position horizontale de la superposition */
+    top: 4%; /* Ajustez la position verticale de la superposition */
+    left: 4%; /* Ajustez la position horizontale de la superposition */
+    right: 4%;
+    bottom: 20%;
     background-color: rgba(0, 0, 0, 0.467);
 }
 
@@ -52,11 +54,13 @@ img{
 h1{
     font-weight: 800;
     font-size: 1.8rem;
+    color:#a3bdcc;
 }
 
 h2{
     font-weight: 600;
     font-size: 1.4rem;
+    color:#a3bdcc;
 }
 
 h3{
@@ -114,7 +118,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: 88vh;
+    height: 44vh;
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
