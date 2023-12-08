@@ -1,0 +1,80 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scenes</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Feuille de style -->
+    <link rel="stylesheet" type="text/css" href="../Ressource/CSS/Question.css">
+    <link rel="stylesheet" type="text/css" href="../Ressource/CSS/Default.css">
+  </head>
+  <body>
+        <div class="column">
+          <div class="card">
+            <table>
+                <tr>
+                    <th>
+                        <img src="../Ressource/Images/imgHmEf.jpg" alt="Jane" style="width:100%">
+                    </th>
+                    <th>
+                       <div class="container">
+                    <h1>Question :</h1>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    
+                    <button class="button">Boutton</button>
+                    <button class="button">Boutton</button>
+                    <button class="button">Boutton</button>
+                    <button class="button">Boutton</button>
+                    </div> 
+                    </th>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ici se trouve le script qui permet de faire l'animation de changement de scene -->
+    <script>
+        let currentQuestion = 1;
+  
+        function nextQuestion() {
+          // Zoom sur la première scene
+          $(`#question${currentQuestion}`).animate(
+            {
+              "font-size": "48px",
+              opacity: 0,
+            },
+            1000,
+            function () {
+              //  cache la scene actuel et reset le style
+              $(this).hide().css({ "font-size": "24px", opacity: 1 });
+  
+              // change la scene a la prochaine
+              currentQuestion++;
+              if (currentQuestion > 3) {
+                currentQuestion = 1; // remet a la premiere scene une fois arriver a la derniere
+              }
+  
+              // affiche la prochaine scene en zoomant
+              $(`#question${currentQuestion}`)
+                .show()
+                .css({
+                  "font-size": "1px",
+                  opacity: 0,
+                })
+                .animate(
+                  {
+                    "font-size": "24px",
+                    opacity: 1,
+                  },
+                  1000
+                );
+            }
+          );
+        }
+      </script>
+  </body>
+</html>
