@@ -31,7 +31,7 @@ div.mur {
     left: 4%; /* Ajustez la position horizontale de la superposition */
     right: 4%;
     bottom: 20%;
-    background-color: rgba(0, 0, 0, 0.467);
+    background-color: var(--fond);
 }
 
 div.jour {
@@ -56,7 +56,9 @@ h1{
     font-size: 1.8rem;
     color:#a3bdcc;
 }
-
+.mode2 i{
+    color: #fff;
+}
 h2{
     font-weight: 600;
     font-size: 1.4rem;
@@ -118,7 +120,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: 44vh;
+    height: 65vh;
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
@@ -321,7 +323,7 @@ main .recent-orders a{
     display: none;
 }
 
-.right-section .dark-mode{
+.right-section .mode2{
     background-color: rgba(132, 139, 200, 0.8);
     display: flex;
     justify-content: space-between;
@@ -333,7 +335,7 @@ main .recent-orders a{
 
 }
 
-.right-section .dark-mode span{
+.right-section .mode2 span{
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -342,7 +344,7 @@ main .recent-orders a{
     justify-content: center;
 }
 
-.right-section .dark-mode span.active{
+.right-section .mode2 span.active{
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
@@ -496,7 +498,7 @@ main .recent-orders a{
         margin: 0;
     }
 
-    .right-section .nav .dark-mode{
+    .right-section .nav .mode2{
         width: 4.4rem;
         position: absolute;
         left: 66%;
@@ -537,4 +539,59 @@ main .recent-orders a{
     transition: 0.4s;
     border-radius: 18px;
     font-size: 20px;
+}
+
+.btn{
+    background-color: var(--noir);
+    width: 20%;
+    height: 60px;
+    border:none;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--vertC);
+    transition: .2s linear;
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-transform:uppercase;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--noir);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--vertC);
+    z-index: -1;
+    transition: 0.2s linear;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+.btn:hover::after {
+    animation: expandAnimation 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandAnimation {
+0% {
+    width:10%;
+    height: 0px;
+}
+30% {
+    width: 10%;
+    height: 60px;
+}
+100% {
+    width: 100%;
+    height: 60px;
+}
 }
