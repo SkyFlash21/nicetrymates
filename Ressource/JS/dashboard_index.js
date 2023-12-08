@@ -3,11 +3,6 @@ const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
 let tablinks = document.querySelectorAll(".tablinks");
 let sectionContainer = document.querySelectorAll('.section-container');
-let count = 0;
-
-const darkMode = document.querySelector('.dark-mode');
-
-const part1 = document.querySelector('#part1');
 
 menuBtn.addEventListener('click', () => {
     sideMenu.style.display = 'block';
