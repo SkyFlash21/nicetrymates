@@ -7,17 +7,12 @@
         $password = $_POST['password'];
 
         // Connect to the MySQL database
-        $servername = 'db';
-        $db_username = "limited_user";
+
+        $servername = 'db5014871567.hosting-data.io';
+        $db_username = 'dbu2245263';
         $db_password = "ceciestunmotsdepasstrescompliquepourlimited_user";
-        $db_name = "nicetrymates";
-
+        $db_name = 'dbs12354220';
         $conn = new mysqli($servername, $db_username, $db_password, $db_name);
-
-        // Check if the connection was successful
-        if ($conn->connect_error) {
-            die('Connection failed: ' . $conn->connect_error);
-        }
 
         // Prepare the SQL statement to check if the user exists
         $stmt = $conn->prepare('SELECT * FROM users WHERE email = ?');
