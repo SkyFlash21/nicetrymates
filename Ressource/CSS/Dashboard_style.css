@@ -356,10 +356,6 @@ main .recent-orders a{
     text-align: right;
 }
 
-.right-section .user-profile h2{
-    margin-bottom: 0.2rem;
-}
-
 @media screen and (max-width: 1200px) {
     .container{
         width: 95%;
@@ -386,10 +382,6 @@ main .recent-orders a{
     main .analyse{
         grid-template-columns: 1fr;
         gap: 0;
-    }
-
-    main .new-users .user-list .user{
-        flex-basis: 40%;
     }
 
     main .recent-orders {
