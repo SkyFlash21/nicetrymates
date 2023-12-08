@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NTM</title>
+    <title>EcoBrain</title>
+    <link rel="icon" type="image/png" href="../Ressource/Images/icone.png">
+
     <!-- Pour incorporer des icones -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -35,40 +37,71 @@
 
     <!-- Option -->
     <div class="menu-container">
+        <div class="mode"><i class='bx bx-sun'></i></div>
         <div class="dropdown">
             <i class='bx bx-images dropbtn' ></i>
                 <div class="dropdown-content">
-                    <a href="#">option1</a>
-                    <a href="#">option2</a>
+                    <a id="fond1" href="#">Thême: Forêt</a>
+                    <a id="fond2" href="#">Thême: Mer</a>
             </div>
         </div>
         <div class="dropdown">
             <i class='bx bx-user-circle dropbtn' ></i>
                 <div class="dropdown-content">
-                    <a href="#">Connexion</a>
-                    <a href="#">Inscription</a>
+                    <a href="Authentification.html">Connexion</a>
+                    <a href="Authentification.html#register">Inscription</a>
             </div>
         </div>
 
     </div>
 
     <div class="title-container container">
-        <h1>Nom du Site</h1>
-        <p>Petite phrase de présentation</p>
+        <h1>EcoBrain</h1>
+        <p>Un site en accord avec réseau action climat</p>
     </div>
 
-    <div class="title-container container">
+    <div class="title-container container propos">
         <h2>A propos</h1>
-        <p>Petite phrase de présentation</p>
+        <p>L’ASSOCIATION
+            Le Réseau Action Climat, fédération de 37 associations nationales
+            et locales, lutte contre les causes du changement climatique, de
+            l’échelle internationale à l’échelle locale. Il est le représentant
+            français du Climate Action Network International, réseau mondial
+            de plus de 1900 ONG.
+            Conscient des impacts majeurs, actuels et à venir, du changement climatique sur
+            l’ensemble de nos sociétés, le Réseau Action Climat porte la mise en place de
+            mesures pour réduire les émissions de gaz à effet de serre de l’ensemble des
+            secteurs responsables. Convaincu que la lutte contre le changement climatique
+            représente aussi une formidable option de sortie de crise et doit, pour réussir,
+            bénéficier au plus grand nombre, il promeut des mesures à la fois bonnes pour le
+            climat mais aussi porteuses de bénéfices en termes de création d’emplois, de
+            préservation de la santé et de plus de justice sociale et de solidarité.
+            Le Réseau Action Climat est indépendant et non partisan. 
+            </p>
     </div>
 
-    <div class="title-container container">
+    <div class="title-container container missions">
         <h2>Nos missions</h1>
-        <p>Petite phrase de présentation</p>
+        <p>●Développer une expertise sur les politiques de lutte contre le
+            changement climatique aux niveaux international, européen,
+            national et local.<br />
+            ● Coordonner les membres de son réseau pour porter d’une seule
+            voix auprès des décideurs des solutions de réduction des
+            émissions de gaz à effet de serre dans les principaux secteurs
+            responsables : transport, agriculture et alimentation, logement,
+            industrie lourde, production et consommation d’énergie, etc.<br />
+            ● Œuvrer pour une plus grande solidarité avec les pays et populations
+            les plus impactés par le changement climatique.<br />
+            ● Informer et sensibiliser sur l’état des connaissances scientifiques
+            autour des changements climatiques (sources des émissions de gaz
+            à effet de serre, impacts actuels et à venir, solutions existantes…)
+            </p>
     </div>
-
-    <button class="btn" href="#">Jouer</button>
+    <a href="Question.html">
+        <button class="btn" href="Question.html">Jouer</button>
+    </a>
 
     <script src="../Ressource/JS/Accueil.js"></script>
+    <script src="../Ressource/JS/DarkLighMode.js"></script>
 </body>
 </html>

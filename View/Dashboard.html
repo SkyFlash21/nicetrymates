@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBrain</title>
+    <link rel="icon" type="image/png" href="../Ressource/Images/icone.png">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../Ressource/CSS/Dashboard_style.css">
-    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+    <link rel="stylesheet" href="../Ressource/CSS/Default.css">
 </head>
 
 <body>
-
+<div class="mur">
     <div class="container">
         <!-- Sidebar Section -->
         <aside>
@@ -35,7 +38,7 @@
                     </span>
                     <h3>LeaderBoard</h3>
                 </a>
-                <a href="#" class="tablinks" onclick="clickBtn(3)">
+                <a href="#" class="tablinks" onclick="clickBtn(3),charlieInvarders()">
                     <span class="material-icons-sharp">
                         logout
                     </span>
@@ -44,6 +47,14 @@
             </div>
         </aside>
         <!-- End of Sidebar Section -->
+
+        <div id="charlie" style="display: none">
+            <div  id="charlieText">
+                <h1>Je crois que t'as raté quelque chose, non?</h1>
+            </div>
+            <img src="../Ressource/Images/charlie.png">
+        </div>
+
 
         <main>
             <div class="section-container">
@@ -68,7 +79,7 @@
                     <div class="visits">
                         <div class="status">
                             <div class="info">
-                                <h3>Nombre de parties</h3>
+                                <h3>Partie n° </h3>
                             </div>
                             <div class="progresss">
                                 <div class="percentage">
@@ -88,8 +99,8 @@
                             <tr>
                                 <th>Essai</th>
                                 <th>Bonnes réponses</th>
-                                <th>Payment</th>
-                                <th>Status</th>
+                                <th>Classement perso</th>
+                                <th>Niveau</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -103,38 +114,25 @@
                 
             </div>
             <div class="section-container">
-                <div class="analyse">
-                    <div class="sales">
-                        <div class="status">
-                            <div class="info">
-                                <h3>Bonnes réponses</h3>
-                            </div>
-                            <div class="progresss">
-                                <svg>
-                                    <circle cx="38" cy="38" r="36"></circle>
-                                </svg>
-                                <div class="percentage">
-                                    <p>?? / ??</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="visits">
-                        <div class="status">
-                            <div class="info">
-                                <h3>Nombre de parties</h3>
-                            </div>
-                            <div class="progresss">
-                                <div class="percentage">
-                                    <p>??</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="recent-orders">
+                    <h2>Recent Orders</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Utilisateur</th>
+                                <th>Bonnes réponses</th>
+                                <th>Rang</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a href="#">Show All</a>
                 </div>
             </div>
             <div class="section-container">
-
+                <audio controls>
+                    <source src="../Ressource/video/Download.mp3" type="audio/mp3">
+                </audio>
             </div>
         </main> 
         <!-- End of Main Content -->
@@ -147,23 +145,14 @@
                         menu
                     </span>
                 </button>
-                <div class="dark-mode">
-                    <span class="material-icons-sharp active">
+                <div class="mode2">
+                    <span class="material-icons-sharp">
                         light_mode
                     </span>
                     <span class="material-icons-sharp">
                         dark_mode
                     </span>
                 </div>
-
-<!-- ici il faudra mettre le nom de la personne -->
-                <div class="profile">
-                    <div class="info">
-                        <p>Name, <b>Reza</b></p>
-                        <small class="text-muted">Admin</small>
-                    </div>
-                </div>
-
             </div>
             <!-- End of Nav -->
             
@@ -171,7 +160,11 @@
 
     </div>
 
+    
     </div>
+    <a href="Question.html">
+        <button class="btn" href="Question.html">Rejouer ?</button>
+    </a>
     <script>
         window.onload = function() {
             init();
@@ -181,7 +174,9 @@
             clickBtn(0);
         }
     </script>
+    </div>
     <script src="../Ressource/JS/dashboard_index.js"></script>
+    <script src="../Ressource/JS/DarkLighMode.js"></script>
 </body>
 
 </html>

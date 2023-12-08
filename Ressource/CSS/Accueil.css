@@ -2,8 +2,19 @@
     user-select: none;
 }
 
+i,.bx-chevron-left,.bx-chevron-right,h1{
+    color: var(--font);
+}
+
+i:hover{
+    background-color: #fff;
+    color:var(--vertF);
+}
+
 body{
     background-image: url("../Images/fondForet1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .bg-black{
@@ -12,17 +23,15 @@ body{
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0,0.45);
+    background-color: var(--fond);
 }
 
 /* Navigation */
 .bx-chevron-left,.bx-chevron-right{
     font-size: 80px;
-    color: #fff;
     top: 45%;
     position: absolute;
     cursor: pointer;
-    color: var(--vertC);
 }
 
 .bx-chevron-left:first-child{
@@ -57,10 +66,10 @@ body{
     flex-direction: row;
     position: absolute;
     right: 40px;
+    top: 30px;
 }
 
 .menu-container i{
-    color: #fff;
     font-size: 40px;
     margin: 0px 10px;
 }
@@ -75,7 +84,6 @@ body{
 }
 
 .title-container h1{
-    color: #fff;
     font-size: 100px;
 }
 
@@ -114,11 +122,11 @@ body{
 }
 
 .btn{
-    background: none;
+    background-color: var(--noir);
     width: 20%;
     height: 60px;
     border:none;
-    font-size: 20px;
+    font-size: 40px;
     font-weight: bold;
     color: var(--vertC);
     transition: .2s linear;
@@ -128,10 +136,12 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    text-transform:uppercase;
 }
 
 .btn:hover{
-    color: #fff;
+    background-color: transparent;
+    color: var(--noir);
 }
 
 .btn::after {
@@ -146,25 +156,25 @@ body{
     border-radius: 10px;
   }
   
-  .btn:hover::after {
+.btn:hover::after {
     animation: expandAnimation 0.5s;
     animation-fill-mode: forwards;
-  }
-  
-  @keyframes expandAnimation {
-    0% {
-        width:10%;
-        height: 0px;
-    }
-    30% {
-      width: 10%;
-      height: 60px;
-    }
-    100% {
-      width: 100%;
-      height: 60px;
-    }
-  }
+}
+
+@keyframes expandAnimation {
+0% {
+    width:10%;
+    height: 0px;
+}
+30% {
+    width: 10%;
+    height: 60px;
+}
+100% {
+    width: 100%;
+    height: 60px;
+}
+}
 
   /* Style pour le bouton du menu */
   
@@ -199,7 +209,6 @@ body{
 
   .dropdown:hover .dropbtn{
     background-color: #fff;
-    color:black;
     border-radius: 10px 10px 0px 0px;
   }
   
@@ -209,4 +218,24 @@ body{
     color:black;
   }
   
-  
+  .propos, .missions{
+    top: 200px;
+  }
+
+  .propos p, .missions p{
+    font-size: 20px;
+  }
+
+  .missions p{
+    text-align: left;
+  }
+
+  .partie-container p:hover{
+    color: #fff;
+  }
+
+  .mode i{
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: -5px;
+  }

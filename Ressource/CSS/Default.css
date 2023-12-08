@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MaSuperPolice';
-    src: url('chemin/vers/maSuperPolice.ttf') format('truetype');
+    src: url('../Roboto/Roboto-Black.ttf') format('truetype');
 }
 
 body {
@@ -13,4 +13,41 @@ body {
     --vertGris: #B0B9A8;
     --vertF: #606C5A;
     --noir : #424340;
+    --vert2: #71cd70;
+    --vert3: #00911d;
+    --color-primary: #6C9BCF;
+    --color-danger: #FF0060;
+    --color-success: #1B9C85;
+    --color-warning: #F7D060;
+    --color-white: #fff;
+    --color-info-dark: #7d8da1;
+    --color-dark: #424340;
+    --color-light: rgba(132, 139, 200, 0.18);
+    --color-dark-variant: #677483;
+    --color-background: #f6f6f9;
+    
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem var(--color-light);
+    --fond: none;
+    --font: #fff;
+    --spec : #606C5A;
+}
+
+.dark-mode-variables{
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+
+    --fond:rgba(0, 0, 0,0.45);
+    --font:#606C5A;
+    --spec: #C9E3CC
 }
