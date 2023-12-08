@@ -1,36 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root{
-    --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
-    --color-success: #1B9C85;
-    --color-warning: #F7D060;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color-dark: #424340;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
-
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
-}
-
-.dark-mode-variables{
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -54,6 +23,22 @@ body{
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: var(--color-background);
+    background-image: url(../Images/fondForet1.jpg);
+} 
+div.mur {
+    position: absolute;
+    top: 4%; /* Ajustez la position verticale de la superposition */
+    left: 4%; /* Ajustez la position horizontale de la superposition */
+    right: 4%;
+    bottom: 20%;
+    background-color: var(--fond);
+}
+
+div.jour {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 a{
@@ -69,11 +54,15 @@ img{
 h1{
     font-weight: 800;
     font-size: 1.8rem;
+    color:#a3bdcc;
 }
-
+.mode2 i{
+    color: #fff;
+}
 h2{
     font-weight: 600;
     font-size: 1.4rem;
+    color:#a3bdcc;
 }
 
 h3{
@@ -131,7 +120,7 @@ aside .sidebar{
     background-color: var(--color-white);
     box-shadow: var(--box-shadow);
     border-radius: 15px;
-    height: 88vh;
+    height: 65vh;
     position: relative;
     top: 1.5rem;
     transition: all 0.3s ease;
@@ -334,8 +323,8 @@ main .recent-orders a{
     display: none;
 }
 
-.right-section .dark-mode{
-    background-color: var(--color-light);
+.right-section .mode2{
+    background-color: rgba(132, 139, 200, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -343,9 +332,10 @@ main .recent-orders a{
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
+
 }
 
-.right-section .dark-mode span{
+.right-section .mode2 span{
     font-size: 1.2rem;
     width: 50%;
     height: 100%;
@@ -354,7 +344,7 @@ main .recent-orders a{
     justify-content: center;
 }
 
-.right-section .dark-mode span.active{
+.right-section .mode2 span.active{
     background-color: var(--color-primary);
     color: white;
     border-radius: var(--border-radius-1);
@@ -508,7 +498,7 @@ main .recent-orders a{
         margin: 0;
     }
 
-    .right-section .nav .dark-mode{
+    .right-section .nav .mode2{
         width: 4.4rem;
         position: absolute;
         left: 66%;
@@ -549,4 +539,59 @@ main .recent-orders a{
     transition: 0.4s;
     border-radius: 18px;
     font-size: 20px;
+}
+
+.btn{
+    background-color: var(--noir);
+    width: 20%;
+    height: 60px;
+    border:none;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--vertC);
+    transition: .2s linear;
+    position: absolute;
+    bottom: 60px;
+    left: 40%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    text-transform:uppercase;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--noir);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: var(--vertC);
+    z-index: -1;
+    transition: 0.2s linear;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+.btn:hover::after {
+    animation: expandAnimation 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes expandAnimation {
+0% {
+    width:10%;
+    height: 0px;
+}
+30% {
+    width: 10%;
+    height: 60px;
+}
+100% {
+    width: 100%;
+    height: 60px;
+}
 }
