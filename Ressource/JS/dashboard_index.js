@@ -32,7 +32,7 @@ function clickBtn(indice){
 //Fonction pour le charlie
 function charlieInvarders(){
     document.getElementById("charlie").style.display ="block";
-    /*setTimeout(function() {
+    setTimeout(function() {
        window.location.href = "Accueil.html";
-    }, 500);*/
+    }, 500);
 }
