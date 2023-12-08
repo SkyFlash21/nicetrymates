@@ -15,7 +15,7 @@ let currentQuestion = 1;
             // change la scene a la prochaine
             currentQuestion++;
             if (currentQuestion > 3) {
-                currentQuestion = 1; // remet a la premiere scene une fois arriver a la derniere
+                window.location.href = 'file:///C:/Users/foata/Documents/GitHub/nicetrymates/View/Dashboard.html';
             }
 
 
