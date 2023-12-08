@@ -1,36 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-:root{
-    --color-primary: #6C9BCF;
-    --color-danger: #FF0060;
-    --color-success: #1B9C85;
-    --color-warning: #F7D060;
-    --color-white: #fff;
-    --color-info-dark: #7d8da1;
-    --color-dark: #424340;
-    --color-light: rgba(132, 139, 200, 0.18);
-    --color-dark-variant: #677483;
-    --color-background: #f6f6f9;
-
-    --card-border-radius: 2rem;
-    --border-radius-1: 0.4rem;
-    --border-radius-2: 1.2rem;
-
-    --card-padding: 1.8rem;
-    --padding-1: 1.2rem;
-
-    --box-shadow: 0 2rem 3rem var(--color-light);
-}
-
-.dark-mode-variables{
-    --color-background: #181a1e;
-    --color-white: #202528;
-    --color-dark: #edeffd;
-    --color-dark-variant: #a3bdcc;
-    --color-light: rgba(0, 0, 0, 0.4);
-    --box-shadow: 0 2rem 3rem var(--color-light);
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -54,6 +23,20 @@ body{
     overflow-x: hidden;
     color: var(--color-dark);
     background-color: var(--color-background);
+    background-image: url(../Images/fondForet1.jpg);
+} 
+div.mur {
+    position: absolute;
+    top: 2%; /* Ajustez la position verticale de la superposition */
+    left: 2%; /* Ajustez la position horizontale de la superposition */
+    background-color: rgba(0, 0, 0, 0.467);
+}
+
+div.jour {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 a{
@@ -335,7 +318,7 @@ main .recent-orders a{
 }
 
 .right-section .dark-mode{
-    background-color: var(--color-light);
+    background-color: rgba(132, 139, 200, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -343,6 +326,7 @@ main .recent-orders a{
     width: 4.2rem;
     cursor: pointer;
     border-radius: var(--border-radius-1);
+
 }
 
 .right-section .dark-mode span{

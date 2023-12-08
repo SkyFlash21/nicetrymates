@@ -6,6 +6,7 @@ let flecheDroite = document.querySelector('#fleche-droite');
 let flecheGauche = document.querySelector('#fleche-gauche');
 let partieIndicateur = document.querySelectorAll('.partie-container p');
 let partieDiv = document.querySelectorAll('.container');
+let titreChangement = document.querySelectorAll('.partie-container p');
 
 if (pageIndice == 0) {
     flecheGauche.style.display = 'none';
@@ -56,3 +57,32 @@ flecheGauche.addEventListener('click',function(event){
     updateTitle()
     updateDiv();
 });
+
+let count = 0;
+
+titreChangement.forEach((element,count) => {
+    element.addEventListener("click",function(event){
+        pageIndice = count;
+        updateTitle();
+        updateDiv();
+    });
+});
+
+// Changement de theme 
+let fond1 = document.querySelector('#fond1');
+let fond2 = document.querySelector('#fond2');
+
+fond1.addEventListener('click',function(event){
+    document.querySelector('body').style.backgroundImage = "url('../Ressource/Images/fondForet1.jpg')";
+    document.querySelectorAll('.container h2').forEach(element => {
+        element.style.color="var(--spec)";
+    });
+});
+
+fond2.addEventListener('click',function(event){
+    document.querySelector('body').style.backgroundImage = "url('../Ressource/Images/fondMer1.jpg')";
+    document.querySelectorAll('.container h2').forEach(element => {
+        element.style.color="var(--spec)";
+    });
+});
+
