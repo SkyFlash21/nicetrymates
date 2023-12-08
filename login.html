@@ -19,7 +19,7 @@
       </div>
       <div class="policy">
         <input type="checkbox" name="remember"> <!-- Added name attribute -->
-        <h3>Remember me</h3>
+        <h3>Se souvenir de moi (24h)</h3>
       </div>
       <div class="input-box button">
         <input type="submit" value="Login"> <!-- Changed "Submit" to "submit" -->
@@ -32,3 +32,9 @@
 
 </body>
 </html>
+
+<script>
+  if (document.cookie.includes('token')) {
+    window.location.href = '/question.html';
+  }
+</script>

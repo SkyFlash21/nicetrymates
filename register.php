@@ -48,7 +48,6 @@
             // Check if user already exists
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = $conn->query($sql);
-
             if ($result->num_rows > 0) {
                 echo "<h2>Registration Failed</h2>";
                 echo "<p>User with email $email already exists</p>";
@@ -61,22 +60,15 @@
                 $lastConnection = date('Y-m-d H:i:s');
                 $insertSql = "INSERT INTO users (username, email, hashedpassword, lastconnection, connectiontoken) VALUES ('$name', '$email', '$hashedPassword', '$lastConnection', '$connectionToken')";
                 if ($conn->query($insertSql) === TRUE) {
-                    // Add token to session
-                    $_SESSION["token"] = $connectionToken;
-
-                    echo "<h2>Registration Successful!</h2>";
-                    echo "<p>Name: $name</p>";
-                    echo "<p>Email: $email</p>";
-                    echo "<p>Password: [hidden for security reasons]</p>";
-                    echo "<p>Terms & Conditions: $terms</p>";
-                    echo "<p>Connection Token: $connectionToken</p>";
+                    setcookie('token', uniqid(), time() + 60*10); // 10 minutes
+                    header('Location: question.html');
                 } else {
                     echo "<h2>Registration Failed</h2>";
                     echo "<p>Error: " . $insertSql . "<br>" . $conn->error . "</p>";
                 }
             }
-
             $conn->close();
+            
         } else {
             // Display validation errors
             echo "<h2>Registration Failed</h2>";
