@@ -61,17 +61,47 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             while ($row = $result->fetch_assoc()) {
                 $answers[] = $row;
             }
-    
-            // create form "id=questionFrom" with the question and the answers, the input have their id from the database as id 
-            echo "<form id='questionForm' action='question.php' method='post'>";
-            echo "<h2>$question</h2>";
-            foreach ($answers as $answer) {
-                echo "<input type='radio' id='$answer[id]' name='answer' value='$answer[id]'>";
-                echo "<label for='$answer[id]'>$answer[answer]</label><br>";
-            }
-            echo "<input type='hidden' name='question_id' value='$nextQuestionId'>";
-            echo "<input type='submit' value='Submit'>";
-            echo "</form>";
+            ?>
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>EcoBrain</title>
+                <link rel="stylesheet" href="../Ressource/CSS/Question.css">
+                <link rel="stylesheet" href="../Ressource/CSS/Default.css">
+                <link rel="shortcut icon" type="imahe/png" href="../Ressource/Images/icone.png">
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                <script src="../Ressource/JS/questionnaire.js"></script>
+            </head>
+            <body>
+                <form id='questionForm' class="column" action='question.php' method='post'>
+                    <div class="card">
+                        <table>
+                            <tr>
+                                <th>
+                                    <img src="../Ressource/Images/imgHmEf.jpg" alt="Jane" style="width:100%">
+                                </th>
+                                <th>
+                                    <div class="container">
+                                        <h2><?=$question?></h2>;
+
+                                        <?php
+                                        foreach ($answers as $answer) {
+                                            echo "<input type='radio' id='$answer[id]' name='answer' value='$answer[id]'>";
+                                            echo "<label for='$answer[id]'>$answer[answer]</label><br>";
+                                        }?>
+                                    </div>
+                                </th>
+                            </tr>
+                        </table>
+                    </div>
+                <input type='hidden' name='question_id' value='$nextQuestionId'>
+                <input type='submit' value='Submit'>
+                </form>;
+            </body>
+            </html>
+            <?php
         }
         
     }
