@@ -1,0 +1,40 @@
+.column {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  padding: 0 10px;
+  
+}
+
+body{
+    background-color:var(--vertC) ;
+}
+
+.card {
+  box-shadow: 5 5px 9px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+
+}
+
+.container {
+  padding: 5 16px;
+}
+
+.button {
+  border: none;
+  padding: 8px;
+  margin: 10px;
+  color: black;
+  background: none;
+  text-align: center;
+  cursor: pointer;
+  width: 50%;
+  transition: 0.2s linear;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color:var(--vertC);
+}
