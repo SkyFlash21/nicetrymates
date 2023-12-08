@@ -37,6 +37,7 @@ body {
     --fond: none;
     --font: #fff;
     --spec : #606C5A;
+    --title : #fff;
 }
 
 .dark-mode-variables{
@@ -49,5 +50,6 @@ body {
 
     --fond:rgba(0, 0, 0,0.45);
     --font:#606C5A;
-    --spec: #C9E3CC
+    --spec: #C9E3CC;
+    --title: #C9E3CC;
 }

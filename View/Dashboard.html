@@ -7,6 +7,9 @@
     <title>EcoBrain</title>
     <link rel="icon" type="image/png" href="../Ressource/Images/icone.png">
     
+    <!-- Pour incorporer des icones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
     <link rel="stylesheet" href="../Ressource/CSS/Dashboard_style.css">
     <link rel="stylesheet" href="../Ressource/CSS/Default.css">
@@ -106,7 +109,6 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <a href="#">Show All</a>
                 </div>
                 <!-- End of Recent Orders -->
             </div>
@@ -126,7 +128,6 @@
                         </thead>
                         <tbody></tbody>
                     </table>
-                    <a href="#">Show All</a>
                 </div>
             </div>
             <div class="section-container">
@@ -137,31 +138,31 @@
         </main> 
         <!-- End of Main Content -->
 
-        <!-- Right Section -->
-        <div class="right-section">
-            <div class="nav">
-                <button id="menu-btn">
-                    <span class="material-icons-sharp">
-                        menu
-                    </span>
-                </button>
-                <div class="mode2">
-                    <span class="material-icons-sharp">
-                        light_mode
-                    </span>
-                    <span class="material-icons-sharp">
-                        dark_mode
-                    </span>
-                </div>
-            </div>
-            <!-- End of Nav -->
-            
-            </div>
 
     </div>
 
     
     </div>
+    <!-- Option -->
+    <div class="menu-container">
+        <div class="mode"><i class='bx bx-sun'></i></div>
+        <div class="dropdown">
+            <i class='bx bx-images dropbtn' ></i>
+            <div class="dropdown-content">
+                <a id="fond1" href="#">Thême: Forêt</a>
+                <a id="fond2" href="#">Thême: Mer</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <i class='bx bx-user-circle dropbtn' ></i>
+                <div class="dropdown-content">
+                    <a href="Authentification.html">Connexion</a>
+                    <a href="Authentification.html#register">Inscription</a>
+            </div>
+        </div>
+
+    </div>
+
     <a href="Question.html">
         <button class="btn" href="Question.html">Rejouer ?</button>
     </a>
@@ -177,6 +178,7 @@
     </div>
     <script src="../Ressource/JS/dashboard_index.js"></script>
     <script src="../Ressource/JS/DarkLighMode.js"></script>
+    <script src="../Ressource/JS/Fond.js"></script>
 </body>
 
 </html>

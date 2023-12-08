@@ -2,10 +2,13 @@
     user-select: none;
 }
 
-i,.bx-chevron-left,.bx-chevron-right,h1{
+i,.bx-chevron-left,.bx-chevron-right{
     color: var(--font);
 }
 
+h1{
+    color:var(--title)
+}
 i:hover{
     background-color: #fff;
     color:var(--vertF);
@@ -126,7 +129,7 @@ body{
     width: 20%;
     height: 60px;
     border:none;
-    font-size: 40px;
+    font-size: 4%w;
     font-weight: bold;
     color: var(--vertC);
     transition: .2s linear;
