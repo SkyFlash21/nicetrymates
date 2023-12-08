@@ -595,3 +595,32 @@ main .recent-orders a{
     height: 60px;
 }
 }
+
+#charlieText{
+    width: 50%;
+    margin: 20px 25%;
+    background-color: white;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left:0px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+#charlieText:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #fff transparent;
+    display: block;
+    width: 0px;
+    z-index: 1;
+    bottom: -15px;
+    left: 40%;
+    margin-left: -15px;
+}
