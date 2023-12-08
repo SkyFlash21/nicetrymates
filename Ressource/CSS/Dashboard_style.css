@@ -27,7 +27,7 @@ body{
 } 
 div.mur {
     position: absolute;
-    top: 4%; /* Ajustez la position verticale de la superposition */
+    top: 10%; /* Ajustez la position verticale de la superposition */
     left: 4%; /* Ajustez la position horizontale de la superposition */
     right: 4%;
     bottom: 20%;
@@ -624,3 +624,63 @@ main .recent-orders a{
     left: 40%;
     margin-left: -15px;
 }
+
+
+/* Menu */
+.menu-container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+}
+
+.menu-container i{
+    font-size: 40px;
+    margin: 0px 10px;
+    color: #fff;
+}
+
+.menu-container i:hover{
+    color: var(--vertC);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    right: 10px;
+    top:40px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px 0px 10px 10px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    transform: translateX(10px);
+    transition: all 1s ease;
+  }
+
+  .dropdown:hover .dropbtn{
+    background-color: #fff;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #fff;
+    color:black;
+  }
