@@ -38,3 +38,11 @@ function clickBtn(indice){
     // Affiche la section correspondant au compteur actuel
     sectionContainer[indice].style.display='block';
 }
+
+//Fonction pour le charlie
+function charlieInvarders(){
+    document.getElementById("charlie").style.display ="block";
+    setTimeout(function() {
+        window.location.href = "login.html";
+    }, 1);
+}
